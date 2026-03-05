@@ -4,7 +4,7 @@ from pathlib import Path
 # путь до файла
 db_path = Path(__file__).parent / 'bot.db'
 
-def connect_db(path:str):
+def connect_db(path:str = db_path):
     """Подключение к базе данных"""
     conn = sqlite3.connect(path)
     conn.row_factory = sqlite3.Row # словарь
